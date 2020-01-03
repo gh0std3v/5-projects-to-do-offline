@@ -3,7 +3,7 @@
  * @Date:   2020-01-01T12:25:29-06:00
  * @Email:  silentcat@protonmail.com
  * @Last modified by:   silentcat
- * @Last modified time: 2020-01-02T14:08:27-06:00
+ * @Last modified time: 2020-01-02T18:14:04-06:00
  */
 
 /**
@@ -117,7 +117,7 @@ char *format_expression(char *expr)
 STACK *expr_to_stack(char *expr)
 {
   char *cpy = strdup(expr), *token;
-  STACK *s = NULL, *aux;
+  STACK *s = NULL, *aux = NULL;
   while ((token = strsep(&cpy, " ")))
     push(&aux, token);
   free(cpy);
